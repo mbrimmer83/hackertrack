@@ -1,0 +1,62 @@
+
+Hacker Track - Week 4
+
+<script>
+
+//Please use the instructions below to complete Hacker Track Week 4. Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 4 - First Name & Last Name" in the subject line.
+
+
+//EXERCISE
+//Write a program that, given an age in seconds, calculates how old someone is in terms of a given planet's solar years.
+
+
+//DETAILS
+// Given an age in seconds, calculate how old someone would be on:
+
+// Earth: orbital period 365.25 Earth days, or 31557600 seconds
+// Mercury: orbital period 0.2408467 Earth years
+// Venus: orbital period 0.61519726 Earth years
+// Mars: orbital period 1.8808158 Earth years
+// Jupiter: orbital period 11.862615 Earth years
+// Saturn: orbital period 29.447498 Earth years
+// Uranus: orbital period 84.016846 Earth years
+// Neptune: orbital period 164.79132 Earth years
+
+// So if you were told someone were 1,000,000,000 seconds old, you should be able to say that they're 31 Earth-years old.
+
+
+//Place code below:
+function yourAge (ageInSeconds, planet) {
+  var ageInSeconds;
+  var planet = planet.toLowerCase();
+  var ageYears = ageInSeconds / 31557600;
+  var solarAge;
+  if (planet === 'mercury') {
+    solarAge = ageYears / .2408467;
+  } else if (planet === 'venus') {
+    solarAge = ageYears / .61519726;
+  } else if (planet === 'mars') {
+    solarAge = ageYears / 1.8808158;
+  } else if (planet === 'jupiter') {
+    solarAge = ageYears / 11.862615;
+  } else if (planet === 'saturn') {
+    solarAge = ageYears / 29.447498;
+  } else if (planet === 'uranus') {
+    solarAge = ageYears / 84.016846;
+  } else if (planet === 'neptune') {
+    solarAge = ageYears / 164.79132;
+  } else if (planet === 'earth') {
+    solarAge = ageYears;
+  }
+  console.log('You are ' + solarAge + ' ' + planet + '-years old!');
+  return solarAge;
+}
+
+
+
+
+
+
+
+
+</script>

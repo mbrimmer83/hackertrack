@@ -1,0 +1,44 @@
+Hacker Track - Week 2
+
+<script>
+
+//INSTRUCTIONS: Hacker Track is due on the following Monday for each week. Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 2 - First Last Name" in the subject line.
+
+//a) Write a function that takes an array as an argument and iterates through each member of the array and returns the sum of all the values. Being able to loop through each member of the array is extremely important.(Test cases: [0] returns 0, [1,2,5] returns 8, [-5,2,5,12] returns 14)
+
+	function iterArr(arr) {
+		var sum = 0;
+	   for (var i = 0; i < arr.length; i++) {
+	   	sum += arr[i];
+	   }
+	   return sum;
+	}
+
+//b) Given an array with multiple values (e.g. [-3,3,5,7]), write a function that returns the maximum number in the array.(The best way to do this is to have the computer go through each number, one at a time, and to update the value in a variable called 'maximum' (or whatever you want to name the variable); imagine if we gave you no number and asked you what a maximum number is. What would you say? Say the first number we gave you was -3 and asked you what a maximum number is. What would you say? Say the next number we gave you was 3 and asked you again what a maximum number now is. What would you say? Have the computer imitate this behavior of updating the maximum number as you iterate through each number in the array). Again, you're not to use any of the pre-built functions.
+
+	function findMax(arr) {
+	   var max;
+		 for (var i = 0; i < arr.length; i++) {
+		 	var currnetNum = arr[i];
+			if (currnetNum > max) {
+				max = currnetNum;
+			}
+		 }
+	   return max;
+	}
+
+
+//c) Given an array with multiple values (e.g. [1,3,5,7,20]), write a function that returns the average of the values in the array. Again, you're not to do this by using any of the pre-built functions in Javascript. Again, iterate through each number in the array and update the 'average' as the program retrieves each number in the array.
+
+	function findAvg(arr) {
+	  var sum = 0;
+		var avg = 0;
+		for (var i = 0; i < arr.length; i++) {
+			sum += arr[i];
+			avg = sum/(i + 1);
+		}
+	   return avg;
+	}
+
+
+</script>

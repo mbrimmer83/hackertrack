@@ -1,0 +1,72 @@
+Hacker Track - Week 5
+
+<script>
+//Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 5 - First Name & Last Name" in the subject line.
+
+//a) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that replaces any negative number with the value of 0.When the program is done x should have no negative values (e.g. [1, 5, 10, 0]).
+
+	function noNeg(arr) {
+		var noneg = [];
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] < 0) {
+				noneg.push(0);
+			} else {
+				noneg.push(arr[i])
+			}
+		}
+   		return noneg;
+	}
+
+
+//b) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that returns an array with the max, min, and average values ([max, min, avg]. ex [0,2,4] should return [4,0,2]).
+
+	function maxMinAvg(arr) {
+   		var arrnew = [0, 0, 0,];
+			var total = 0;
+			for (var i = 0; i < arr.length; i++) {
+				total = total + arr[i];
+				if (arr[i] > arrnew[0]) {
+					arrnew[0] = arr[i];
+				}
+				if (arr[i] < arrnew[1]) {
+					arrnew[1] = arr[i];
+				}
+			}
+			total = total / arr.length;
+			arrnew[2] = total;
+   		return arrnew;
+	}
+
+//c) Write a function that takes an array as an argument and return an array with the first and last values swapped. The array will have a minimum length of 2 (ex. [1,5,10,-2] should return [-2,5,10,1]).
+
+	function swap(arr) {
+		var arrnew = [];
+		var arrLength = arr.length;
+		for (var i = 0; i < arr.length; i++) {
+			if (i === 0) {
+				var firstNum = arr[i];
+			} else if (i <= arr.length) {
+				var lastNum = arr[i];
+			}
+				arrnew.push(arr[i]);
+		}
+		arrnew[0] = lastNum;
+		arrnew[arrLength - 1] = firstNum;
+	   return arrnew;
+	}
+
+//d) Write a function that takes an array of numbers and replaces any number that's negative to a string called 'DigitalCrafts'. For example if array = [-1,-3,2] should return ['DigitalCrafts', 'DigitalCrafts', 2].
+
+	function numToStr(arr) {
+		var newarr = [];
+	   for (var i = 0; i < arr.length; i++) {
+	   	if (arr[i] < 0) {
+	   		newarr.push('DigitalCrafts');
+	   	} else {
+	   		newarr.push(arr[i]);
+	   	}
+	   }
+	   return arrnew;
+	}
+
+</script>

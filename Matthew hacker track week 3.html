@@ -1,0 +1,32 @@
+Hacker Track - Week 3
+
+<script>
+
+//a) Write a function that would return an array of all the odd numbers between 1 to 50. (ex. [1,3,5, .... , 47,49]). Hint: Use 'push' method.
+
+	function oddNumbers() {
+   		for (var i = 0; i < 50; i++) {
+   			if (i % 2 === 1) {
+   				arr.push(i);
+   			}
+   		}
+   		return arr;
+	}
+
+
+//b) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that squares each value in the array. When the program is done x should have values that have been squared (e.g. [1, 25, 100, 4]). You're not to use any of the pre-built function in Javascript. You could for example square the value by saying x[i] = x[i] * x[i];.
+
+	function squareVal(arr) {
+		var squaredNum;
+		var sqarr = [];
+   for (var i = 0; i < arr.length; i++) {
+   	squaredNum = arr[i] * arr[i];
+		sqarr.push(squaredNum);
+   }
+   		return sqarr;
+	}
+
+
+//Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 3 - First Last Name" in the subject line.
+
+</script>
